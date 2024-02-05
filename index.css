@@ -1,3 +1,10 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
 #container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -16,13 +23,13 @@
   width: 1000px;
   height: 800px;
   align-content: center;
+  margin-right: 60px;
 }
 
 body {
   width: auto;
   height: 100lvh;
   background-color: rgb(118, 244, 236);
-  padding: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,6 +59,7 @@ header {
   transform: skewY(5deg);
   transition: 5s;
   text-decoration: none;
+  color: rgb(6, 223, 209);
 }
 header:hover {
   transform: perspective(1000px) translate(-50%, -50%) rotateY(360deg);
