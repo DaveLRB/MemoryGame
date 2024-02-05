@@ -50,6 +50,14 @@ button:hover {
   transition: 500ms linear;
 }
 
+button:hover {
+  background-color: rgba(118, 244, 236);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 500ms linear;
+  transform: rotate(-45deg);
+}
+
 header {
   text-align: center;
   font-size: 60px;
