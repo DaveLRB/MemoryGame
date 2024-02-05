@@ -7,6 +7,14 @@ const cards = [
   "bruna",
   "maria",
   "paulo",
+  "mario",
+  "joaquim",
+  "antonio",
+  "pedro",
+  "filipa",
+  "bruna",
+  "maria",
+  "paulo",
 ];
 const cardNames = {
   mario: "Mário",
@@ -17,7 +25,17 @@ const cardNames = {
   bruna: "Bruna",
   maria: "Maria",
   paulo: "Paulo",
+  mario: "Mário",
+  joaquim: "Joaquim",
+  antonio: "António",
+  pedro: "Pedro",
+  filipa: "Filipa",
+  bruna: "Bruna",
+  maria: "Maria",
+  paulo: "Paulo",
 };
+
+initGame();
 
 let clickedCards = [];
 let matchedCards = [];
@@ -34,10 +52,12 @@ function initGame() {
   const shuffleCards = random(cards);
 
   const container = document.getElementById("container");
+  
   container.innerHTML = "";
 
   shuffleCards.forEach((card) => {
-    const button = document.createElement("button");
+    const button=document.createElement("button"); 
+    button.innerHTML = card;
     button.textContent = cardNames[card];
     button.classList.add("card");
     container.appendChild(button);
