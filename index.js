@@ -39,6 +39,12 @@ initGame();
 
 let clickedCards = [];
 let matchedCards = [];
+let modal = document.getElementById("custom-alert");
+let closeButton = document.getElementsByClassName("close")[0];
+
+closeButton.onclick = function() {
+  modal.style.display = "none";
+}
 
 function random(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -101,7 +107,7 @@ function initGame() {
       }
 
       if (matchedCards.length === cards.length) {
-        alert("Congratulations! You have won the game!");
+        modal.style.display = "block";
       }
     }
   }
