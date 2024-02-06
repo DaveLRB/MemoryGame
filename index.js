@@ -1,17 +1,22 @@
 let cards = [
-  "mario", "joaquim", "antonio", "pedro", "filipa", "bruna", "maria", "paulo",
-  "mario", "joaquim", "antonio", "pedro", "filipa", "bruna", "maria", "paulo"
+  "mario", "quim", "toni", "pedro", "pipa", "bruna", "maria", "paulo",
+  "mario", "quim", "toni", "pedro", "pipa", "bruna", "maria", "paulo"
 ];
 
 let cardNames = {
-  mario: "Mário", joaquim: "Joaquim", antonio: "António", pedro: "Pedro",
-  filipa: "Filipa", bruna: "Bruna", maria: "Maria", paulo: "Paulo"
+  mario: "Mário", quim: "Quim", toni: "Toni", pedro: "Pedro",
+  pipa: "Pipa", bruna: "Bruna", maria: "Maria", paulo: "Paulo"
 };
 
 let clickedCards = [];
 let matchedCards = [];
 let modal = document.getElementById("custom-alert");
 let closeButton = document.getElementsByClassName("close")[0];
+let refreshButton = document.getElementsByClassName("refresh")[0];
+
+refreshButton.onclick = function () {
+  initGame();
+}
 
 closeButton.onclick = function () {
   modal.style.display = "none";
@@ -34,7 +39,7 @@ function initGame() {
 
   shuffleCards.forEach((card, index) => {
     const button = document.createElement("button");
-    button.textContent = "?";
+    button.textContent = "🤷🏻‍♂️";
     button.classList.add("card");
     button.addEventListener("click", () => handleCardClick(button, card));
     container.appendChild(button);
@@ -70,13 +75,12 @@ function checkMatch() {
     }
   } else {
     setTimeout(() => {
-      card1.button.textContent = "?";
-      card2.button.textContent = "?";
+      card1.button.textContent = "🤷🏻‍♂️";
+      card2.button.textContent = "🤷🏻‍♂️";
       card1.button.classList.remove("opened");
       card2.button.classList.remove("opened");
       clickedCards = [];
-    }, 500);
+    });
   }
 }
-
 initGame();
