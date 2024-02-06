@@ -26,4 +26,4 @@ Enjoy the game!
 ## Contributors
 
 - [David Barrela](https://www.github.com/DaveLRB)
-- [Francisco Silva] (https://www.github.com/FranciscoSilvaMgLPT)
+- [Francisco Silva](https://www.github.com/FranciscoSilvaMgLPT)
