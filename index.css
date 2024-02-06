@@ -1,9 +1,7 @@
-*{
+* {
   padding: 0px;
   margin: 0px;
 }
-
-
 
 #container {
   display: grid;
@@ -15,10 +13,10 @@
     ". . . ."
     ". . . ."
     ". . . .";
-  border: 10px rgb(118, 244, 236);
+  border: 10px rgb(57, 95, 221);
   border-style: double;
   border-radius: 25px;
-  background-color: rgb(157, 244, 241);
+  background-color: rgb(100, 219, 237);
   padding: 20px;
   width: 1000px;
   height: 800px;
@@ -29,79 +27,73 @@
 body {
   width: auto;
   height: 100lvh;
-  background-color: rgb(118, 244, 236);
+  background-color: rgb(100, 219, 237);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-button {
-  width: 100%;
-  height: 150px;
-  border: 3px solid rgb(42, 229, 182);
-  border-radius: 25px;
-  background-color: rgb(118, 244, 236);
-}
-
-button:hover {
-  background-color: rgba(118, 244, 236);
-  border-radius: 100px;
-  cursor: pointer;
-  transition: 500ms linear;
-}
-
-button:hover {
-  background-color: rgba(118, 244, 236);
-  border-radius: 100px;
-  cursor: pointer;
-  transition: 500ms linear;
-  transform: rotate(-45deg);
-}
-
 header {
+  margin-right: 130px;
   text-align: center;
   font-size: 60px;
   font-weight: bold;
-  font-family:'Lucida Sans', monospace;
+  font-family: "Lucida Sans", monospace;
   transform: prespective(1000px) translate(-50%, -50%);
   transform: skewY(5deg);
   transition: 5s;
   text-decoration: none;
-  color: rgb(6, 223, 209);
 }
 header:hover {
   transform: perspective(1000px) translate(-50%, -50%) rotateY(360deg);
   transform: skewY(-20deg);
   transition: 0.3s;
-  text-shadow: 10px -10px 0 rgba(0, 0, 0);
+  text-shadow: 10px -10px 0 rgba(0, 0, 0, 0.7);
   cursor: pointer;
   text-decoration: none;
 }
 
 a {
   text-decoration: none;
-  color: rgb(6, 223, 209);
+  color: rgb(111, 100, 237);
 }
 
 a:hover {
   text-decoration: none;
 }
 
+button {
+  width: 100%;
+  height: 150px;
+  border: 3px solid rgb(100, 219, 237);
+  border-radius: 10px;
+  font-size: 45px;
+}
+
+button:hover {
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 500ms linear;
+  transform: rotate(-359deg);
+  box-shadow: 0px 0px 10px rgb(111, 100, 237);
+}
+
 .card {
   width: 100%;
   height: 150px;
-  border: 3px solid rgb(42, 229, 182);
-  border-radius: 25px;
-  background-color: rgb(118, 244, 236);
-  font-size: 30px;
+  border: 3px solid rgb(57, 95, 221);
+  background-color: rgb(111, 100, 237);
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .opened {
-  background-color: rgb(175, 251, 175);
+  background-color: transparent;
 }
 
 .matched {
-  background-color: rgb(132, 240, 237);
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .modal {
@@ -117,36 +109,117 @@ a:hover {
 }
 
 .modal-content {
-  background-color:rgba(42, 229, 182,0.7);
+  background-color: rgba(100, 219, 237, 0.7);
   margin: 15% auto;
   padding: 20px;
   border-width: 15px;
-  border-style:double;
-  border-color:rgb(6, 223, 209);
+  border-style: double;
+  border-color: rgb(111, 100, 237);
   width: 50%;
-  color:rgba(0, 0, 0, 0.4);
   border-radius: 25px;
   height: 70%;
   text-align: center;
-  font-size: 50px;
   display: flex;
   align-items: center;
-  font-family: 'Lucida Sans', monospace;
   flex-direction: column;
 }
 
-.close {
-  color: rgba(42, 229, 182,0.9);
-  font-size: 70px;
-  font-weight: bold;
-  margin-bottom:70px;
+p {
+  animation: pulse 3s linear infinite;
+  font-size: 80px;
+  font-family: "Lucida Sans", monospace;
 }
 
+@keyframes pulse {
+  0% {
+    color: rgb(57, 95, 221);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    color: rgb(111, 100, 237);
+  }
+}
+
+#Congratulations {
+  margin: 35px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  filter: grayscale(100%);
+  transition: all 1s ease-in-out; 
+  animation: spin 4s linear infinite; 
+  cursor: pointer;
+}
+
+#Congratulations:hover {
+  filter: grayscale(10%);
+  transition: 2200ms ease-in-out;
+  width: 500px;
+  height: 500px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+}
+
+.close {
+  color: rgba(111, 100, 237, 0.7);
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
 
 .close:hover,
 .close:focus {
-  color: rgb(175, 251, 175);
+  color: rgb(111, 100, 237);
   text-decoration: none;
   cursor: pointer;
-  
+}
+
+.refresh {
+  color: rgba(111, 100, 237, 0.7);
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 950px;
+  margin-left: 15px;
+}
+
+.refresh:hover,
+.refresh:focus {
+  color: rgb(111, 100, 237);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes mymove {
+  50% {background-color: rgb(57, 95, 221,0.5)};
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(111, 100, 237);
+  height: 100lvh;
+  width: 150px;
+  animation: mymove 3s infinite ease-in-out;
+}
+
+#top-right{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(111, 100, 237);
+  height: 100lvh;
+  width: 150px;
+  animation: mymove 3s infinite ease-in-out;
 }
