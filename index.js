@@ -37,7 +37,7 @@ function initGame() {
 
   container.innerHTML = "";
 
-  shuffleCards.forEach((card, index) => {
+  shuffleCards.forEach((card) => {
     const button = document.createElement("button");
     button.textContent = "🤷🏻‍♂️";
     button.classList.add("card");
