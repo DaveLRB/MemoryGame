@@ -34,7 +34,7 @@ body {
 }
 
 header {
-  margin-right: 130px;
+  margin-right: 50px;
   text-align: center;
   font-size: 60px;
   font-weight: bold;
@@ -79,7 +79,7 @@ button:hover {
 }
 
 .card {
-  width: 100%;
+  width: 150px;
   height: 150px;
   border: 3px solid rgb(57, 95, 221);
   background-color: rgb(111, 100, 237);
@@ -189,9 +189,9 @@ p {
 
 .refresh {
   color: rgba(111, 100, 237, 0.7);
-  font-size: 70px;
+  font-size: 150px;
   font-weight: bold;
-  margin-bottom: 950px;
+  margin-bottom: 810px;
   margin-left: 15px;
 }
 
@@ -211,7 +211,7 @@ footer {
   flex-direction: row;
   background-color: rgb(111, 100, 237);
   height: 100lvh;
-  width: 150px;
+  width: 100px;
   animation: mymove 3s infinite ease-in-out;
 }
 
@@ -220,6 +220,6 @@ footer {
   flex-direction: row;
   background-color: rgb(111, 100, 237);
   height: 100lvh;
-  width: 150px;
+  width: 100px;
   animation: mymove 3s infinite ease-in-out;
 }
