@@ -15,12 +15,14 @@ let closeButton = document.getElementsByClassName("close")[0];
 let refreshButton = document.getElementsByClassName("refresh")[0];
 
 refreshButton.onclick = function () {
-  initGame();
+  console.log("refresh init");
+  location.reload();
 }
 
 closeButton.onclick = function () {
+  console.log("close init");
   modal.style.display = "none";
-  initGame();
+  location.reload();
 }
 
 function random(array) {
@@ -51,6 +53,7 @@ function handleCardClick(button, card) {
     button.textContent = cardNames[card];
     button.classList.add("opened");
     clickedCards.push({ button, card });
+    console.log("clickedCards");
 
     if (clickedCards.length === 2) {
       setTimeout(checkMatch, 1000);
@@ -67,11 +70,13 @@ function checkMatch() {
     card2.button.classList.add("matched");
     matchedCards.push(card1, card2);
     clickedCards = [];
+    console.log("matchedCards")
 
     if (matchedCards.length === cards.length) {
       setTimeout(() => {
         modal.style.display = "block";
-      }, 500);
+      }, 100);
+      console.log("modal loaded")
     }
   } else {
     setTimeout(() => {

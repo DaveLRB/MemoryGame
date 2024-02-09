@@ -193,6 +193,7 @@ p {
   font-weight: bold;
   margin-bottom: 810px;
   margin-left: 15px;
+  
 }
 
 .refresh:hover,
@@ -202,7 +203,7 @@ p {
   cursor: pointer;
 }
 
-@keyframes mymove {
+@keyframes move {
   50% {background-color: rgb(57, 95, 221,0.5)};
 }
 
@@ -212,7 +213,7 @@ footer {
   background-color: rgb(111, 100, 237);
   height: 100lvh;
   width: 100px;
-  animation: mymove 3s infinite ease-in-out;
+  animation: move 3s infinite ease-in-out;
 }
 
 #top-right{
